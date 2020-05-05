@@ -4,7 +4,7 @@
 ![Android CI](https://github.com/lndmflngs/font-span-view/workflows/Android%20CI/badge.svg)
 [![](https://jitpack.io/v/lndmflngs/font-span-view.svg)](https://jitpack.io/#lndmflngs/font-span-view)
 
-MultiSpanView with custom fonts
+Multi span TextView with custom fonts
 
 <img src="https://github.com/lndmflngs/font-span-view/blob/master/art/1.png?raw=true" width="45%" />
 
