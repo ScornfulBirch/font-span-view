@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HighlightTextView">
+        <attr name="highlightFont" format="reference|string" />
+        <attr name="highlightColor" format="color" />
+        <attr name="highlightPattern" format="string" />
+        <attr name="isHighlight" format="boolean" />
+        <attr name="useUnderline" format="boolean" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FontSingleSpanView">
+        <attr name="firstFont" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FontTwoSpanView">
+        <attr name="secondFont" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FontThreeSpanView">
+        <attr name="thirdFont" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FontFourSpanView">
+        <attr name="fourthFont" format="string" />
+    </declare-styleable>
+
+</resources>
