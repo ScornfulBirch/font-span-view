@@ -39,7 +39,7 @@ The simplest way is to use `FontSpanView` like a normal `TextView`
             app:secondText="Mr. Fluffypants" />
 ```
 #### Styling
-You can override setSpanOnResult and set custom spans on SpannableString[]
+You can override [setSpanOnResult][2] and set custom spans on SpannableString
 
 For more information see `app` directory
 
@@ -61,4 +61,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 [1]: https://github.com/lndmflngs/font-span-view/releases/latest
-[2]: https://github.com/lndmflngs/font-span-view/blob/master/app/src/main/java/com/lockwood/fontspandemo/view/HighlightTextView.kt
+[2]: https://github.com/lndmflngs/font-span-view/blob/master/app/src/main/java/com/lockwood/fontspandemo/view/HighlightTextView.kt#L67
