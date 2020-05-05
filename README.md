@@ -43,6 +43,11 @@ You can override [setSpanOnResult][2] and set custom spans on SpannableString
 
 For more information see `app` directory
 
+## See also 
+* [**compound-text-view**](https://github.com/lndmflngs/compound-text-view) - Change gravity of Image Drawable in TextView 🌌
+* [**multispan-view**](https://github.com/lndmflngs/multispan-view) - TextView with power of Spans 💪
+* [**roboto-span-view**](https://github.com/lndmflngs/roboto-span-view) - Multi span TextView with Roboto fonts
+
 ## Issue Tracking
 Found a bug? Have an idea for an improvement? Feel free to [add an issue](../../issues)
 
