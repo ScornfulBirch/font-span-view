@@ -25,7 +25,7 @@ dependencies {
 }
 ```
 ## Usage
-The simplest way is to use `FontTwoSpanView` like a normal `TextView`
+The simplest way is to use `FontSpanView` like a normal `TextView`
 
 ```xml
         <com.lockwood.multispan.font.FontTwoSpanView
