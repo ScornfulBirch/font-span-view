@@ -9,9 +9,9 @@ import android.text.style.UnderlineSpan
 import android.util.AttributeSet
 import android.util.Log
 import com.lockwood.fontspandemo.R
-import com.lockwood.multispan.extensions.fetchAttrs
-import com.lockwood.multispan.extensions.getStringOrEmpty
-import com.lockwood.multispan.extensions.getTextColorOrDefault
+import com.lockwood.fontspandemo.extensions.fetchAttrs
+import com.lockwood.fontspandemo.extensions.getStringOrEmpty
+import com.lockwood.fontspandemo.extensions.getTextColorOrDefault
 import com.lockwood.multispan.font.FontThreeSpanView
 import com.lockwood.multispan.font.span.FontSpan
 import java.util.regex.PatternSyntaxException
@@ -42,16 +42,13 @@ class HighlightTextView @JvmOverloads constructor(
         }
 
     init {
-        fetchAttrs(R.styleable.HighlightTextView, context, attrs) {
-            highlightPattern =
-                getStringOrEmpty(R.styleable.HighlightTextView_highlightPattern)
-            highlightFont =
-                getFontOrDefault(R.styleable.HighlightTextView_highlightFont)
-            highlightSpanColor =
-                getTextColorOrDefault(
-                    R.styleable.HighlightTextView_highlightColor,
-                    defaultTextColor
-                )
+        fetchAttrs(context, R.styleable.HighlightTextView, attrs) {
+            highlightPattern = getStringOrEmpty(R.styleable.HighlightTextView_highlightPattern)
+            highlightFont = getFontOrDefault(R.styleable.HighlightTextView_highlightFont)
+            highlightSpanColor = getTextColorOrDefault(
+                R.styleable.HighlightTextView_highlightColor,
+                defaultTextColor
+            )
             isHighlight = getBoolean(
                 R.styleable.HighlightTextView_isHighlight,
                 DEFAULT_IS_HIGHLIGHT
@@ -61,14 +58,17 @@ class HighlightTextView @JvmOverloads constructor(
                 DEFAULT_IS_USE_UNDERLINE
             )
         }
+
         updateSpanStyles()
     }
 
     override fun setSpanOnResult(resultSpans: SpannableString): CharSequence {
         return if (isHighlight && !highlightPattern.isNullOrEmpty()) {
+
             try {
                 val regexPattern = highlightPattern!!.toRegex()
                 val highlightMatches = regexPattern.findAll(resultSpans).map { it.value }
+
                 highlightMatches.forEach { item ->
                     val start = resultSpans.indexOf(item)
                     val end = start + item.length
@@ -90,6 +90,7 @@ class HighlightTextView @JvmOverloads constructor(
                     }
                 }
                 resultSpans
+
             } catch (e: PatternSyntaxException) {
                 Log.e(TAG, e.message.toString())
                 super.setSpanOnResult(resultSpans)

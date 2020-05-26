@@ -18,9 +18,9 @@ package com.lockwood.multispan.font
 
 import android.content.Context
 import android.util.AttributeSet
-import com.lockwood.multispan.extensions.fetchAttrs
 import com.lockwood.multispan.extensions.fetchSingleSpanAttrs
 import com.lockwood.multispan.font.base.FontMultiSpanView
+import com.lockwood.multispan.font.extensions.fetchAttrs
 import com.lockwood.multispan.font.spannable.FontSingleSpan
 import com.lockwood.multispan.spannable.SingleSpan.Companion.ITEM_FIRST
 import com.lockwood.multispan.spannable.SingleSpan.Companion.ONE_ITEM_COUNT
@@ -43,7 +43,7 @@ open class FontSingleSpanView @JvmOverloads constructor(
     init {
         fetchSingleSpanAttrs(context, attrs, defaultTextSize, defaultTextColor)
 
-        fetchAttrs(R.styleable.FontSingleSpanView, context, attrs) {
+        fetchAttrs(context, R.styleable.FontSingleSpanView, attrs) {
             firstFont = getFontOrDefault(R.styleable.FontSingleSpanView_firstFont)
         }
     }

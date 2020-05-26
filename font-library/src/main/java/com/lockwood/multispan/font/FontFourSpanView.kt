@@ -18,8 +18,8 @@ package com.lockwood.multispan.font
 
 import android.content.Context
 import android.util.AttributeSet
-import com.lockwood.multispan.extensions.fetchAttrs
 import com.lockwood.multispan.extensions.fetchFourSpanAttrs
+import com.lockwood.multispan.font.extensions.fetchAttrs
 import com.lockwood.multispan.font.spannable.FontFourSpan
 import com.lockwood.multispan.spannable.FourSpan.Companion.FOUR_ITEMS_COUNT
 import com.lockwood.multispan.spannable.FourSpan.Companion.ITEM_FOURTH
@@ -42,7 +42,7 @@ open class FontFourSpanView @JvmOverloads constructor(
     init {
         fetchFourSpanAttrs(context, attrs, defaultTextSize, defaultTextColor)
 
-        fetchAttrs(R.styleable.FontFourSpanView, context, attrs) {
+        fetchAttrs(context, R.styleable.FontFourSpanView, attrs) {
             fourthFont = getFontOrDefault(R.styleable.FontFourSpanView_fourthFont)
         }
     }

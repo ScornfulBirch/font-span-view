@@ -22,8 +22,8 @@ import android.graphics.Typeface
 import android.util.AttributeSet
 import android.util.Log
 import com.lockwood.multispan.MultiSpanView
-import com.lockwood.multispan.extensions.getStringOrEmpty
 import com.lockwood.multispan.font.delegate.SpanFontDelegate
+import com.lockwood.multispan.font.extensions.getStringOrEmpty
 import com.lockwood.multispan.font.item.FontSpanItem
 import com.lockwood.multispan.font.spannable.FontSpannable
 
@@ -32,6 +32,11 @@ abstract class FontMultiSpanView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = android.R.attr.textViewStyle
 ) : MultiSpanView<FontSpanItem>(context, attrs, defStyleAttr), FontSpannable {
+
+    companion object {
+
+        private val TAG = FontMultiSpanView::class.java.simpleName
+    }
 
     override fun initSpan(): FontSpanItem {
         return FontSpanItem(
@@ -69,11 +74,6 @@ abstract class FontMultiSpanView @JvmOverloads constructor(
         return SpanFontDelegate(item) { updateSpanStyles() }
     }
     // endregion
-
-    companion object {
-
-        private val TAG = FontMultiSpanView::class.java.simpleName
-    }
 
 }
 

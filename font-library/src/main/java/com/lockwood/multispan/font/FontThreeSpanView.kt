@@ -18,8 +18,8 @@ package com.lockwood.multispan.font
 
 import android.content.Context
 import android.util.AttributeSet
-import com.lockwood.multispan.extensions.fetchAttrs
 import com.lockwood.multispan.extensions.fetchThreeSpanAttrs
+import com.lockwood.multispan.font.extensions.fetchAttrs
 import com.lockwood.multispan.font.spannable.FontThreeSpan
 import com.lockwood.multispan.spannable.ThreeSpan.Companion.ITEM_THIRD
 import com.lockwood.multispan.spannable.ThreeSpan.Companion.THREE_ITEMS_COUNT
@@ -42,7 +42,7 @@ open class FontThreeSpanView @JvmOverloads constructor(
     init {
         fetchThreeSpanAttrs(context, attrs, defaultTextSize, defaultTextColor)
 
-        fetchAttrs(R.styleable.FontThreeSpanView, context, attrs) {
+        fetchAttrs(context, R.styleable.FontThreeSpanView, attrs) {
             thirdFont = getFontOrDefault(R.styleable.FontThreeSpanView_thirdFont)
         }
     }

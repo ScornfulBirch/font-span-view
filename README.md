@@ -21,7 +21,7 @@ allprojects {
 ```
 ```
 dependencies {
-        implementation 'com.github.lndmflngs:font-span-view:1.0.0'
+        implementation 'com.github.lndmflngs:font-span-view:1.0.1'
 }
 ```
 ## Usage
